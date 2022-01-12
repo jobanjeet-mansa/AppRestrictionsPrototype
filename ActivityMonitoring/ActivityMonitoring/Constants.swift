@@ -4,4 +4,8 @@ struct Constants {
 
 static let udRestrictedApps = "restrictedApplications"
 
+    
+    
 }
+
+
