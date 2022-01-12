@@ -15,7 +15,6 @@ struct UnlockAccess: View {
                 .border(.black, width: 2)
             .padding(.all)
         }.ignoresSafeArea()
-        
     }
 }
 

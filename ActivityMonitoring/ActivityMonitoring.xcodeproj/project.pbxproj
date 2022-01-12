@@ -14,6 +14,7 @@
 		53EB107F278ED57500AF6478 /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EB107E278ED57500AF6478 /* Authorization.swift */; };
 		53EB1082278EDF5F00AF6478 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EB1081278EDF5F00AF6478 /* Constants.swift */; };
 		53EB1084278EE0C200AF6478 /* UnlockAppsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EB1083278EE0C200AF6478 /* UnlockAppsView.swift */; };
+		53EB1088278EF02700AF6478 /* Restrictions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EB1087278EF02700AF6478 /* Restrictions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		53EB1080278EDCBC00AF6478 /* ActivityMonitoring.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ActivityMonitoring.entitlements; sourceTree = "<group>"; };
 		53EB1081278EDF5F00AF6478 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		53EB1083278EE0C200AF6478 /* UnlockAppsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockAppsView.swift; sourceTree = "<group>"; };
+		53EB1087278EF02700AF6478 /* Restrictions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restrictions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +45,7 @@
 			isa = PBXGroup;
 			children = (
 				53EB106F278ED0E100AF6478 /* ActivityMonitoring */,
+				53EB1074278ED0E200AF6478 /* Assets.xcassets */,
 				53EB106E278ED0E100AF6478 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,8 +62,8 @@
 			isa = PBXGroup;
 			children = (
 				53EB1070278ED0E100AF6478 /* ActivityMonitoringApp.swift */,
-				53EB1085278EE0CA00AF6478 /* Views */,
-				53EB1074278ED0E200AF6478 /* Assets.xcassets */,
+				53EB1085278EE0CA00AF6478 /* View */,
+				53EB1086278EF00400AF6478 /* Model */,
 				53EB1076278ED0E200AF6478 /* Preview Content */,
 				53EB107E278ED57500AF6478 /* Authorization.swift */,
 				53EB1081278EDF5F00AF6478 /* Constants.swift */,
@@ -77,13 +80,21 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		53EB1085278EE0CA00AF6478 /* Views */ = {
+		53EB1085278EE0CA00AF6478 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				53EB1083278EE0C200AF6478 /* UnlockAppsView.swift */,
 				53EB1072278ED0E100AF6478 /* AppSelectionView.swift */,
 			);
-			name = Views;
+			name = View;
+			sourceTree = "<group>";
+		};
+		53EB1086278EF00400AF6478 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				53EB1087278EF02700AF6478 /* Restrictions.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +169,7 @@
 			files = (
 				53EB107F278ED57500AF6478 /* Authorization.swift in Sources */,
 				53EB1073278ED0E100AF6478 /* AppSelectionView.swift in Sources */,
+				53EB1088278EF02700AF6478 /* Restrictions.swift in Sources */,
 				53EB1084278EE0C200AF6478 /* UnlockAppsView.swift in Sources */,
 				53EB1071278ED0E100AF6478 /* ActivityMonitoringApp.swift in Sources */,
 				53EB1082278EDF5F00AF6478 /* Constants.swift in Sources */,
