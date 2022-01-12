@@ -9,10 +9,16 @@ struct ActivityMonitoringApp: App {
     var body: some Scene {
         
         WindowGroup {
-                AppSelection()
+            AppSelection()
         }
     }
 }
+
+func secondsToMinutesSeconds(_ seconds: Int) -> ( Int, Int) {
+    return ((seconds % 3600) / 60, (seconds % 3600) % 60)
+}
+
+
 
 class AppDelegate: NSObject, UIApplicationDelegate {
 

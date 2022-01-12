@@ -12,6 +12,7 @@ class MyMonitor: DeviceActivityMonitor {
         let applications = model.selectionToDiscourage.applicationTokens
         store.shield.applications = applications.isEmpty ? nil : applications
         store.dateAndTime.requireAutomaticDateAndTime = true
+        
     }
 
     override func intervalDidEnd(for activity: DeviceActivityName) {

@@ -13,13 +13,17 @@ class Restrictions: ObservableObject {
     var selectionToDiscourage = FamilyActivitySelection() {
         willSet {
             print ("got here \(newValue)")
+            
+            for category in newValue.categories {
+                print(category.localizedDisplayName)
+            }
+            
             let applications = newValue.applicationTokens
             let categories = newValue.categoryTokens
             //let webCategories = newValue.webDomainTokens
             store.shield.applications = applications.isEmpty ? nil : applications
             store.shield.applicationCategories = ShieldSettings.ActivityCategoryPolicy.specific(categories, except: Set())
             store.shield.webDomainCategories = ShieldSettings.ActivityCategoryPolicy.specific(categories, except: Set())
-
         }
     }
 
