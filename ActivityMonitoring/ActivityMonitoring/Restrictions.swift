@@ -12,6 +12,9 @@ class Restrictions: ObservableObject {
 
     var selectionToDiscourage = FamilyActivitySelection() {
         willSet {
+            
+            UserDefaults.standard.setValue(true, forKey: "appSelected")
+            
             print ("got here \(newValue)")
             
             for category in newValue.categories {

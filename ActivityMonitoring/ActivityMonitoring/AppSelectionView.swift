@@ -10,13 +10,15 @@ struct AppSelection: View {
     var body: some View {
         
         VStack {
+            let isSelected = UserDefaults.standard.bool(forKey: "appSelected")
+            if !isSelected {
             Button("Select Apps To Restrict") {
                 isPresented.toggle()
             }.font(.system(size: 30))
                 .foregroundColor(.white)
             .familyActivityPicker(isPresented: $isPresented, selection: $restrictions.selectionToDiscourage)
             Divider()
-            
+            }
             Button("Start Monitoring") {
                 showMainScreen.toggle()
                 

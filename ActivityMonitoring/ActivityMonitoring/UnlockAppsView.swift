@@ -11,11 +11,15 @@ struct UnlockAccess: View {
         
         ZStack {
             Color(UIColor.white)
+            
             Button("  Unlock Applications  ") {
                 
                 let store = ManagedSettingsStore()
                 let applicationData = store.shield.applications
-                UserDefaults.standard.setValue(applicationData, forKey: "appList")
+                
+                storeData().appData = applicationData
+                
+             //   UserDefaults.standard.setValue(applicationData, forKey: "appList")
                 store.shield.applications = nil
                 
                 timerStarted.toggle()
@@ -60,7 +64,6 @@ struct TimerView: View {
 }
 
 
-
 struct UnlockAccessView_Previews: PreviewProvider {
     static var previews: some View {
         UnlockAccess()
@@ -70,9 +73,8 @@ struct UnlockAccessView_Previews: PreviewProvider {
 class accessFunc {
     
     func disable() {
-        let appsList = UserDefaults.standard.object(forKey: "appList") as? Set<ApplicationToken>
+        let appsList = storeData().appData
                  let store = ManagedSettingsStore()
                     store.shield.applications = appsList
     }
-    
 }
