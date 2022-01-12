@@ -1,9 +1,4 @@
-//
-//  UnlockAppsView.swift
-//  ActivityMonitoring
-//
-//  Created by macMini_Mansa on 12/01/22.
-//
+
 
 import SwiftUI
 
@@ -18,7 +13,8 @@ struct UnlockAccess: View {
             .border(.cyan, width: 2)
     }
 }
-struct UnlockAppsView_Previews: PreviewProvider {
+
+struct UnlockAccessView_Previews: PreviewProvider {
     static var previews: some View {
         UnlockAccess()
     }

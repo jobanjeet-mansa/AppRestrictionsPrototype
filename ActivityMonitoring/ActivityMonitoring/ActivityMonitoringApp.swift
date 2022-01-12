@@ -18,10 +18,10 @@ struct ActivityMonitoringApp: App {
         
         WindowGroup {
             if !(appsRestricted?.isEmpty ?? true) {
-                
+                UnlockAccess()
             }
             else {
-                FamilyView().onAppear(perform: authorizationControl.requestingAccess)
+                AppSelection().onAppear(perform: authorizationControl.requestingAccess)
             }
             
         }

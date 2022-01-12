@@ -7,7 +7,7 @@
 import FamilyControls
 import SwiftUI
 
-struct FamilyView: View {
+struct AppSelection: View {
     
     @State var selection = FamilyActivitySelection()
     
@@ -34,13 +34,13 @@ struct FamilyView: View {
             }
             
             }
-        }
+        }.ignoresSafeArea()
     }
 
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct AppSelectionView_Previews: PreviewProvider {
     static var previews: some View {
-        FamilyView()
+        AppSelection()
     }
 }
