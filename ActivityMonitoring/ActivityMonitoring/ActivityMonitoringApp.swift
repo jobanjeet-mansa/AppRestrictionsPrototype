@@ -17,13 +17,14 @@ struct ActivityMonitoringApp: App {
     var body: some Scene {
         
         WindowGroup {
+            
             if !(appsRestricted?.isEmpty ?? true) {
                 UnlockAccess()
             }
             else {
                 AppSelection().onAppear(perform: authorizationControl.requestingAccess)
             }
-            
+
         }
     }
 }

@@ -6,11 +6,16 @@ struct UnlockAccess: View {
   
     var body: some View {
         
-        Button("Unlock Applications") {
-            print("Unlocking Access")
-        }.font(.system(.largeTitle))
-            .foregroundColor(.cyan)
-            .border(.cyan, width: 2)
+        ZStack {
+            Color(UIColor.white)
+            Button("  Unlock Applications  ") {
+                print("Unlocking Access")
+            }.font(.system(.largeTitle))
+                .foregroundColor(.black)
+                .border(.black, width: 2)
+            .padding(.all)
+        }.ignoresSafeArea()
+        
     }
 }
 

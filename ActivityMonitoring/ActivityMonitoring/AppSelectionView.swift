@@ -17,8 +17,8 @@ struct AppSelection: View {
             Color(UIColor.green)
             NavigationView{
             VStack {
-                FamilyActivityPicker(selection: $selection).onSubmit {
-                    print("DASD")
+                FamilyActivityPicker(selection: $selection).onAppear {
+                  
                 }
             }
             .onChange(of: selection) { newSelection in
@@ -26,7 +26,11 @@ struct AppSelection: View {
                 let categories = selection.categories
                 let webDomains = selection.webDomains
           
-                print("Apps \(applications) , Categories \(categories) , Websites \(webDomains) \(newSelection.applications.description)")
+                print("Old")
+                print("Apps \(applications.description) , Categories \(categories.description) , Websites \(webDomains) \(webDomains.description)")
+                
+                print("NEW")
+                print("Apps \(newSelection.applications.description)   Categories \(newSelection.categories.description)  WebDomains \(newSelection.webDomains.description)")
                 
                 NavigationLink(destination: UnlockAccess()) {
                     
@@ -35,6 +39,7 @@ struct AppSelection: View {
             
             }
         }.ignoresSafeArea()
+            
     }
 
 }

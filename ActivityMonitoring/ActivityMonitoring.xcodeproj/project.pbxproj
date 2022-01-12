@@ -58,13 +58,13 @@
 		53EB106F278ED0E100AF6478 /* ActivityMonitoring */ = {
 			isa = PBXGroup;
 			children = (
-				53EB1085278EE0CA00AF6478 /* Views */,
-				53EB1080278EDCBC00AF6478 /* ActivityMonitoring.entitlements */,
 				53EB1070278ED0E100AF6478 /* ActivityMonitoringApp.swift */,
+				53EB1085278EE0CA00AF6478 /* Views */,
 				53EB1074278ED0E200AF6478 /* Assets.xcassets */,
 				53EB1076278ED0E200AF6478 /* Preview Content */,
 				53EB107E278ED57500AF6478 /* Authorization.swift */,
 				53EB1081278EDF5F00AF6478 /* Constants.swift */,
+				53EB1080278EDCBC00AF6478 /* ActivityMonitoring.entitlements */,
 			);
 			path = ActivityMonitoring;
 			sourceTree = "<group>";
