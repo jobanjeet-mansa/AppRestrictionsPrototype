@@ -33,7 +33,7 @@ class Restrictions: ObservableObject {
         catch {
             print ("Could not start monitoring \(error)")
         }
-
+        
         store.dateAndTime.requireAutomaticDateAndTime = true
         store.account.lockAccounts = true
         store.passcode.lockPasscode = true

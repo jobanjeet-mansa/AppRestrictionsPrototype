@@ -1,9 +1,4 @@
-//
-//  ContentView.swift
-//  ActivityMonitoring
-//
-//  Created by macMini_Mansa on 12/01/22.
-//
+
 import FamilyControls
 import SwiftUI
 
@@ -11,18 +6,29 @@ struct AppSelection: View {
     
     @StateObject var restrictions = Restrictions.shared
     @State var isPresented = false
-    
+    @State var showMainScreen = false
     var body: some View {
-        Button("Select Apps To Restrict") {
-            isPresented = true
-        }.font(.system(size: 30))
-            .foregroundColor(.white)
-        .familyActivityPicker(isPresented: $isPresented, selection: $restrictions.selectionToDiscourage)
-        Divider()
-        Button("Start Monitoring") {
-            restrictions.initiateMonitoring()
-        }.font(.system(size: 30))
-            .foregroundColor(.white)
+        
+        VStack {
+            Button("Select Apps To Restrict") {
+                isPresented.toggle()
+            }.font(.system(size: 30))
+                .foregroundColor(.white)
+            .familyActivityPicker(isPresented: $isPresented, selection: $restrictions.selectionToDiscourage)
+            Divider()
+            
+            Button("Start Monitoring") {
+                showMainScreen.toggle()
+                
+               // restrictions.initiateMonitoring()
+            }.font(.system(size: 30))
+                .foregroundColor(.white)
+                .sheet(isPresented: $showMainScreen) {
+                    UnlockAccess()
+                }
+        }
+        
+            
     }
 }
 
@@ -49,15 +55,24 @@ struct RestrictAppsPickerView: View {
             let categories = selection.categories
             let webDomains = selection.webDomains
             
+            for app in applications {
+                
+                print(app.localizedDisplayName)
+                
+            }
+            
+            for category in categories {
+                print(category.localizedDisplayName)
+            }
+            
+            
             print("Old")
             print("Apps \(applications.description) , Categories \(categories.description) , Websites \(webDomains) \(webDomains.description)")
             
             print("NEW")
             print("Apps \(newSelection.applications.description)   Categories \(newSelection.categories.description)  WebDomains \(newSelection.webDomains.description)")
             
-            NavigationLink(destination: UnlockAccess()) {
-                
-            }
+          
         }
     }
 }

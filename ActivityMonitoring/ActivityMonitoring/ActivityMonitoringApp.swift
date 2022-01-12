@@ -1,9 +1,3 @@
-//
-//  ActivityMonitoringApp.swift
-//  ActivityMonitoring
-//
-//  Created by macMini_Mansa on 12/01/22.
-//
 
 import SwiftUI
 import FamilyControls

@@ -15,6 +15,7 @@
 		53EB1082278EDF5F00AF6478 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EB1081278EDF5F00AF6478 /* Constants.swift */; };
 		53EB1084278EE0C200AF6478 /* UnlockAppsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EB1083278EE0C200AF6478 /* UnlockAppsView.swift */; };
 		53EB1088278EF02700AF6478 /* Restrictions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EB1087278EF02700AF6478 /* Restrictions.swift */; };
+		53EB108A278EFE1600AF6478 /* ActivityMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EB1089278EFE1600AF6478 /* ActivityMonitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		53EB1081278EDF5F00AF6478 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		53EB1083278EE0C200AF6478 /* UnlockAppsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockAppsView.swift; sourceTree = "<group>"; };
 		53EB1087278EF02700AF6478 /* Restrictions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restrictions.swift; sourceTree = "<group>"; };
+		53EB1089278EFE1600AF6478 /* ActivityMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityMonitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				53EB1087278EF02700AF6478 /* Restrictions.swift */,
+				53EB1089278EFE1600AF6478 /* ActivityMonitor.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 				53EB1073278ED0E100AF6478 /* AppSelectionView.swift in Sources */,
 				53EB1088278EF02700AF6478 /* Restrictions.swift in Sources */,
 				53EB1084278EE0C200AF6478 /* UnlockAppsView.swift in Sources */,
+				53EB108A278EFE1600AF6478 /* ActivityMonitor.swift in Sources */,
 				53EB1071278ED0E100AF6478 /* ActivityMonitoringApp.swift in Sources */,
 				53EB1082278EDF5F00AF6478 /* Constants.swift in Sources */,
 			);
